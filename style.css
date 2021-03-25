@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Inter";
+    src: url("/fonts/Inter.ttf");
+}
+
+/* PAGE INDEX */
+
+body {
+    font-family: Inter;
+}
+
+header a {
+    font-size: 29px;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+#pres {
+  animation-name: apparition;
+  animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+
+}
+
+@keyframes apparition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#titre1 {
+  animation-name: slidein;
+  animation-duration: 6s;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+#myVideo {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0;
+  }
+
+  div#textVideo {
+    
+    position: relative;
+    margin-top: -800px!important;
+
+  }
+
+  div#textVideo h1 {
+
+    font-size: 160px;
+
+  }
+  
+  #myBtn {
+    position: absolute;
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  #carousel p {
+    opacity: 0;
+  }
+
+  #carousel li:hover p {
+    opacity: 1;
+  }
+
+/*PAGE MENU*/
+
+#list a {
+  font-size: 160px;
+  animation-name: apparition;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes apparition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#shop:hover {
+  background: url("img/shop2.jpg");
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 400px;
+  margin-bottom: -500px;
+  margin-right: 1000px;
+}
+
+#ourstory:hover {
+  background: url("img/ourstory.jpg");
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 400px;
+  margin-top: -200px;
+  margin-right: 1000px;
+}
+
+#lookbook:hover {
+  background: url("img/lookbook.jpg");
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 400px;
+  margin-bottom: -600px;
+  margin-right: 1100px;
+}

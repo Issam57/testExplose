@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <title>Title</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/glide.core.min.css">
+  <link rel="stylesheet" href="css/glide.theme.min.css">
+  <script src="https://kit.fontawesome.com/d532a86907.js" crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="output.css">
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  </head>
+
+
+  <body class="bg-black text-white">
+
+      <header>
+          <nav class="mt-20">
+              <a href="#" class="ml-20">BigTone</a>
+              <a href="menu.html" class="float-right mr-20">Menu</a>
+          </nav>
+      </header>
+
+      <div>
+        <div class="bg-fixed" style="background-image: url(img/mission-img.png); width: 612; height: 820px; background-repeat: no-repeat;background-position: center;">   
+        </div>
+          <h1 style="font-size: 194px; margin-top: -650px;" class="ml-28 ">Shapes<br>+ Movements</h1>
+
+            <div x-data="{ show: true }">
+              <div x-show="show" style="width: 358px;height: 165.5px;" class="-mt-72 mr-80 float-right bg-gris">
+                <p class="px-5 py-5 text-grey-400">To provide the best possible experience, our site uses both necessary and optional cookies to store information. 
+                  By continuing to browse you are accepting our Cookie Policy.</p>
+                  <a @click="show = false" class="text-sm ml-5 mb-3" href="#">Accept</a>
+              </div>
+            </div>
+
+
+      </div>
+      <div id="pres" class="flex justify-center mt-52 text-6xl">
+        <p class="text-left">Earthy tones, knitted <br> patterns and metallic accents <br> are what characterizes this <br> Autumn Winter collection.</p>
+      </div>
+
+      <div id="titre1" class="grid md:grid-cols-3 text-center mt-52 sm:grid-cols-1">
+        <a class="text-9xl text-rose" href="#">Ladies</a>
+        <a class="text-9xl text-bleu" href="#">Men</a>
+        <a class="text-9xl text-vert" href="#">Children</a>
+      </div>
+
+
+      <div id="carousel" class="container mx-auto mt-52">
+        <div class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide flex justify-center align-center">
+                <img src="img/img-01.png" alt="img1">
+                <a class="-ml-96" href="#">
+                  <p>28€</p> <p class="text-6xl"> Soft Pants</p>
+                </a>
+              </li>
+              <li class="glide__slide flex justify-center align-center">
+                <img src="img/img-02.png" alt="img2">
+                <a class="-ml-96" href="#">
+                  <p>32€</p> <p class="text-6xl"> Sweat</p>
+                </a>
+              </li>
+              <li class="glide__slide flex justify-center align-center">
+                <img src="img/img-03.png" alt="img3">
+                <a class="-ml-96" href="#">
+                  <p>59€</p> <p class="text-6xl"> Robe</p>
+                </a>
+              </li>
+              <li class="glide__slide flex justify-center align-center">
+                <img src="img/img-04.png" alt="img4">
+                <a class="-ml-96" href="#">
+                  <p>99€</p> <p class="text-6xl"> Nike</p>
+                </a>
+                
+              </li>
+            </ul>
+          </div>
+          <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="fas fa-arrow-circle-left"></i></button>
+            <button class="glide__arrow glide__arrow--right " data-glide-dir=">"><i class="fas fa-arrow-circle-right"></i></button>
+          </div>
+        </div>
+      </div>
+
+
+    <div class="mb-10 mt-48">
+        <video muted loop id="myVideo" class="z-0">
+          <source src="video/Explose - A decade of digital - Making Off.mp4" type="video/mp4">
+        </video>
+      
+      <div x-data="{ titre: true }" id="textVideo" class="container mx-auto z-10">
+        <h1  x-show="titre">Our <br>Shapes</h1>
+        <button class="border-opacity-0" @click="titre = false" id="myBtn" onclick="myFunction()"><i class="fas fa-pause"></i></button>
+      </div>
+    </div>
+
+
+
+    <div class="flex justify-center align-center mt-96">
+      <hr class="w-96">
+    </div>
+    <footer class="text-center mt-40">
+      <div class="grid grid-cols-2">
+        <div class="text-center">
+          <a class="mr-36" href="">Follow</a><br>
+          <a class="ml-24" href="">BigTone on</a>
+          <div class="flex space-x-20 justify-center align-center">
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="flex space-x-14">
+          <a href="">Shop</a>
+          <a href="">Our Story</a>
+          <a href="">Lookbook</a>
+        </div>
+      </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script>
+
+      const products = {
+        type: 'carousel',
+        startAt: 0,
+        perView: 3,
+        breakpoints: {
+          1050: {
+            perView: 2
+          },
+          600: {
+            perView: 1
+          }
+        }
+      }
+
+      new Glide('.glide', products).mount()
+
+      var video = document.getElementById("myVideo");
+
+// Get the button
+var btn = document.getElementById("myBtn");
+
+// Pause and play the video, and change the button text
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = '<i class="fas fa-pause"> Pause</i>';
+  } else {
+    video.pause();
+    btn.innerHTML = '<i class="fas fa-play"> Play</i>';
+  }
+}
+    </script>
+  </body>
+</html>
