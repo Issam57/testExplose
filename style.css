@@ -42,6 +42,10 @@ a:active {
   animation-duration: 6s;
 }
 
+#titre1 a:hover {
+  font-size: 180px;
+}
+
 @keyframes slidein {
   from {
     margin-left: 100%;
