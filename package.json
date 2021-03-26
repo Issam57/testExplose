@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "postcss build style.css -o output.css"
+    "build": "postcss build style.css -o output.css",
+    "production": "cross-env NODE_ENV=production postcss style.css -o output.css"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,7 @@
     "tailwindcss": "^2.0.4"
   },
   "dependencies": {
+    "cross-env": "^7.0.3",
     "postcss-cli": "^8.3.1"
   }
 }
